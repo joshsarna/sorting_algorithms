@@ -16,8 +16,9 @@ end
 
 def build_tree(numbers)
   numbers.length.times do |i|
-    numbers = structure_node(numbers, -i)
+    numbers = structure_node(numbers, numbers.length - i - 1)
   end
+  numbers
 end
 
 def heap_sort(numbers)
@@ -27,5 +28,5 @@ def heap_sort(numbers)
     sorted_numbers << numbers[0]
     numbers = numbers[1..-1]
   end
-  sorted_numbers
+  sorted_numbers.reverse
 end
