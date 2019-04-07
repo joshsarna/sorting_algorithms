@@ -22,5 +22,7 @@ def merge_sort(numbers)
     end
     number_arrays = merged_arrays
   end
-  number_arrays.map{ | i | i[0] }
+  number_arrays[0]
 end
+
+p merge_sort([2,6,2,7,8,23,64,3])
